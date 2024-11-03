@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+.container {
+   width: 100%;
+   min-height:100vh;
+   background:linear-gradient(250deg , #65e12b,#f2e200);
+   padding: 10px;
+}
+.todo-app{
+    width: 100%;
+    max-width: 540px;
+    background: linear-gradient(250deg, #f2e200, #12d968);
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 30px;
+    background-color: rgb(185, 226, 185);
+    margin-top: 20px;
+}
+input{
+    padding: 10px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    width: 100%;
+    background: transparent;
+}
+button{
+    padding: 10px 50px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    font-weight: 16px;
+    background-color: #08e567;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+button:active {
+    background-color:#12d968 ;
+    transform: scale(0.8);
+}
+ul li{
+    list-style-type: none;
+    padding: 12px 8px 12px 50px;
+    transition: background-color 0.3s ease;
+    background:transparent;
+    margin-bottom: 10px;
+    font-weight: bold; 
+    position: relative;
+    user-select: none;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+}
+ul li::before{
+    content: "";
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(uncheck.png);
+    background-size: cover;
+    background-position: center;
+    top: 10px;
+    left: 8px;
+}
+ul li.check{
+    color: #555;
+    text-decoration: line-through;
+}
+ul li.check::before{
+    background-image: url(check.jpg);
+}
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+ul li span:hover{
+    background: #edeef0;
+    cursor: pointer;
+}
